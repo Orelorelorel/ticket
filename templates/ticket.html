@@ -1,0 +1,26 @@
+ <div class="container-fluid mt-4">
+     <h3 class="display-6 text-center mb-6 border-bottom pb-4">{{ service }}</h3>
+     <div class="container-fluid">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search your ticket here" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-success" type="button" id="button-addon2">Search</button>
+            <button type="button" class="btn btn-outline-success">Add ticket</button>
+        </div>
+     </div>
+      <div class="row">
+          {% for item in content %}
+            <div class="p-2 col-4">
+              <div class="card shadow-sm p-3 mb-5">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item["title"] }}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{ item["keyword"] }}</h6>
+                  <p class="card-text">
+                    {{ item["paragraph"] }}
+                  </p>
+                <button class="btn btn-outline-success" type="submit">Edit</button>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+    </div>
