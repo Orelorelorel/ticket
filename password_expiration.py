@@ -1,5 +1,4 @@
 import openpyxl
-import datetime
 
 def extract_password(xlsx_file):
     wb = openpyxl.load_workbook(xlsx_file)
@@ -111,4 +110,37 @@ def extract_password(xlsx_file):
         else:
             allowed_values_others.append(account["service account"])
 
-    return allowed_values_epa
+    allowed_values = {
+        "epa": allowed_values_epa,
+        "zmi": allowed_values_zmi,
+        "ldc": allowed_values_ldc,
+        "nhn": allowed_values_nhn,
+        "nhx": allowed_values_nhx,
+        "elh": allowed_values_elh,
+        "epc": allowed_values_epc,
+        "mmu": allowed_values_mmu,
+        "sso": allowed_values_sso,
+        "sto": allowed_values_sto,
+        "sot": allowed_values_sot,
+        "ehe": allowed_values_ehe,
+        "met": allowed_values_met,
+        "aug": allowed_values_aug,
+        "w16": allowed_values_w16,
+        "emo": allowed_values_emo,
+        "eat": allowed_values_eat,
+        "eli": allowed_values_eli,
+        "fbu": allowed_values_fbu,
+        "ebe": allowed_values_ebe,
+        "ebc": allowed_values_ebc,
+        "eso": allowed_values_eso,
+        "dis": allowed_values_dis,
+        "upr": allowed_values_upr,
+        "ame": allowed_values_ame,
+        "bncs": allowed_values_bncs,
+        "oma": allowed_values_oma,
+        "ebu": allowed_values_ebu,
+        "epr": allowed_values_epr,
+        "others": allowed_values_others
+    }
+
+    return allowed_values
