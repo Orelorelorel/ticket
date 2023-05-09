@@ -1,4 +1,5 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request
+from password_expiration import extract_password
 
 app = Flask(__name__)
 
@@ -76,6 +77,20 @@ def mam_ticket():
     filter_content = [item for item in content if item["service"] == "MAM/PostProd"]
     service = "Mam / Post prod"
     return render_template("mampostprod.html",content=filter_content, service = service)
+
+@app.route("/password_expiration", methods=['GET', 'POST'])
+def password_expiration():
+    content = None
+    if request.method == 'POST':
+        uploaded_file = request.files['file']
+        filename = uploaded_file.filename
+
+        uploaded_file.save(filename)
+
+        content = extract_password(filename)
+
+    return render_template("passwordexpiration.html", content=content)
+
 
 if __name__ == "__main__":
     app.run(host="192.168.1.26", port=5000)
