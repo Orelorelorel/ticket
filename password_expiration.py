@@ -59,7 +59,10 @@ def extract_password(xlsx_file):
         elif "epa" in account["service account"] and any(key in account["service account"] for key in audiotech_key):
             allowed_values_epa_audiotech.append(account["service account"])
         elif "epa" in account["service account"] and any(key not in account["service account"] for key in coretech_key):
-            allowed_values_epa.append(account["service account"])
+            allowed_values_epa.append({
+                account["service account"],
+                account["expiration date"]
+            })
         elif "zmi" in account["service account"]:
             allowed_values_zmi.append(account["service account"])
         elif "ldc" in account["service account"]:
