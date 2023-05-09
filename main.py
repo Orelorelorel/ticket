@@ -84,11 +84,8 @@ def password_expiration():
     if request.method == 'POST':
         uploaded_file = request.files['file']
         filename = uploaded_file.filename
-
         uploaded_file.save(filename)
-
         content = extract_password(filename)
-
     return render_template("passwordexpiration.html", content=content)
 
 
