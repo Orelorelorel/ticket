@@ -17,7 +17,12 @@ def extract_password(xlsx_file):
         else:
             pass
 
+    coretech_key = ["mcr","pcr","lt","gfx"]
+    audiotech_key = ["scr"]
+
     allowed_values_epa = []
+    allowed_values_epa_coretech = []
+    allowed_values_epa_audiotech = []
     allowed_values_zmi = []
     allowed_values_ldc = []
     allowed_values_nhn = []
@@ -49,7 +54,11 @@ def extract_password(xlsx_file):
     allowed_values_ebu = []
 
     for account in every_accounts:
-        if "epa" in account["service account"]:
+        if "epa" in account["service account"] and any(key in account["service account"] for key in coretech_key):
+            allowed_values_epa_coretech.append(account["service account"])
+        elif "epa" in account["service account"] and any(key in account["service account"] for key in audiotech_key):
+            allowed_values_epa_audiotech.append(account["service account"])
+        elif "epa" in account["service account"] and any(key not in account["service account"] for key in coretech_key):
             allowed_values_epa.append(account["service account"])
         elif "zmi" in account["service account"]:
             allowed_values_zmi.append(account["service account"])
@@ -112,6 +121,8 @@ def extract_password(xlsx_file):
 
     allowed_values = {
         "epa": allowed_values_epa,
+        "epa coretech": allowed_values_epa_coretech,
+        "epa audiotech": allowed_values_epa_audiotech,
         "zmi": allowed_values_zmi,
         "ldc": allowed_values_ldc,
         "nhn": allowed_values_nhn,
