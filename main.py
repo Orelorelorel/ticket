@@ -95,8 +95,10 @@ def password_expiration_v2():
         uploaded_file = request.files['file']
         filename = uploaded_file.filename
         uploaded_file.save(filename)
-        content = extract_password_v2(filename)
-    return render_template("passwordv2.html")
+        data = extract_password_v2(filename)
+    else:
+        pass
+    return render_template("passwordv2.html", data=data)
 
 if __name__ == "__main__":
     app.run(host="192.168.1.26", port=5000, debug=True)
