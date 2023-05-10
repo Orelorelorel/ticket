@@ -91,14 +91,48 @@ def password_expiration():
 
 @app.route("/password_v2",methods=['GET', 'POST'])
 def password_expiration_v2():
+    keywords = {
+        'epa': 'EPA',
+        'zmi': 'ZMI',
+        'ldc': 'LDC',
+        'nhn': 'NHN',
+        'nhx': 'NHX',
+        'elh': 'ELH',
+        'epc': 'EPC',
+        'mmu': 'MMU',
+        'sso': 'SSO',
+        'sto': 'STO',
+        'sot': 'SOT',
+        'ehe': 'EHE',
+        'met': 'MET',
+        'aug': 'AUG',
+        'w16': 'W16',
+        'emo': 'EMO',
+        'eat': 'EAT',
+        'eli': 'ELI',
+        'fbu': 'FBU',
+        'ebe': 'EBE',
+        'ebc': 'EBC',
+        'eso': 'ESO',
+        'dis': 'DIS',
+        'upr': 'UPR',
+        'ame': 'AME',
+        'bncs': 'BNCS',
+        'oma': 'OMA',
+        'ebu': 'EBU',
+        'epr': 'EPR',
+        'war': 'WAR',
+        'gfx': "GFX"
+    }
     if request.method == 'POST':
         uploaded_file = request.files['file']
         filename = uploaded_file.filename
         uploaded_file.save(filename)
         data = extract_password_v2(filename)
     else:
-        pass
-    return render_template("passwordv2.html", data=data)
+        data = []
+
+    return render_template("passwordv2.html", data=data, keywords=keywords)
 
 if __name__ == "__main__":
     app.run(host="192.168.1.26", port=5000, debug=True)
