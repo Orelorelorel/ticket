@@ -102,7 +102,7 @@ def json_dump_accounts(entries):
     with open('data_accounts.json', 'w') as file:
         json.dump(entries, file)
 
-def extract_password(xlsx_file):
+def extract_password_v2(xlsx_file):
     wb = openpyxl.load_workbook(xlsx_file)
     sheet = wb.active
 
@@ -133,11 +133,4 @@ def extract_password(xlsx_file):
         print(f"Email: {entry['email']}")
         print(f"Perimeter: {entry['perimeter']}")
         print()
-
-
-
-
-
-extract_password("test.xlsx")
-
 

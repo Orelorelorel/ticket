@@ -1,5 +1,6 @@
 from flask import Flask,render_template, request
 from password_expiration import extract_password
+from testpassword import extract_password_v2
 
 app = Flask(__name__)
 
@@ -88,6 +89,14 @@ def password_expiration():
         content = extract_password(filename)
     return render_template("passwordexpiration.html", content = content)
 
+@app.route("/password_v2",methods=['GET', 'POST'])
+def password_expiration_v2():
+    if request.method == 'POST':
+        uploaded_file = request.files['file']
+        filename = uploaded_file.filename
+        uploaded_file.save(filename)
+        content = extract_password_v2(filename)
+    return render_template("passwordv2.html")
 
 if __name__ == "__main__":
-    app.run(host="192.168.1.26", port=5000)
+    app.run(host="192.168.1.26", port=5000, debug=True)
