@@ -123,6 +123,7 @@ def extract_password_v2(xlsx_file):
                 entry['expiration date'] = entry['expiration date'].strftime('%Y-%m-%d')
                 entry = split_epa_perimeters(entry)
                 data.append(entry)
+    json_dump_accounts(data)
 
     return data
 
