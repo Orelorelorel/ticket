@@ -84,9 +84,6 @@ def split_epa_perimeters(entry):
     keywords = {
         "coretech": ["pcr", "lt", "gfx"],
         "audiotech": ["scr"],
-        "viz_accounts": ["nhnwapgfx", "nhnwapgfx", "nhnzapgfxhub", "nhnzapviz", "epawapgfx", "nhnzapviz", "viz"],
-        "playout": [],
-        "postprod": ["ame", "stratus"]
     }
 
     if entry['service'] == "EPA":
@@ -100,7 +97,6 @@ def split_epa_perimeters(entry):
                     entry['email'] = "jerome.bordier@wbd.com"
                 else:
                     entry["perimeter"] = perimeter
-                    entry['email'] = ""
                 break
         else:
             entry["perimeter"] = "epa"
@@ -109,28 +105,48 @@ def split_epa_perimeters(entry):
 
     return entry
 
+def sort_after_epa(entry):
+    keywords = {
+        "viz_accounts": ["nhnwapgfx", "nhnwapgfx", "nhnzapgfxhub", "nhnzapviz", "epawapgfx", "nhnzapviz", "viz","nhngfx","gfx_eng"],
+        "playout": [],
+        "postprod": ["ame", "stratus"],
+        "livetouch": []
+    }
+    emails = {
+        "viz_accounts": "luc.duhamel@wbd.com",
+        "playout": "dl_m2p_playout@discovery.com",
+        "postprod": "dl_m2p_postprod@discovery.com",
+        "livetouch": "luc.duhamel@wbd.com"
+    }
+    for perimeter, keyword_list in keywords.items():
+        if any(keyword in entry['service account'] for keyword in keyword_list):
+            entry["perimeter"] = perimeter
+            entry["email"] = emails[perimeter]
+        else:
+            pass
+
+    return entry
 
 def json_dump_accounts(entries):
     with open('data_accounts.json', 'w') as file:
         json.dump(entries, file)
 
 def create_perimeter_dataframes(data):
-    dfs = {}  # Dictionnaire pour stocker les DataFrames par périmètre
+    perimeter_dataframes = {}
 
-    # Regrouper les données par périmètre
     for entry in data:
         perimeter = entry['perimeter']
-        if perimeter not in dfs:
-            dfs[perimeter] = []
-        dfs[perimeter].append(entry)
 
-    # Créer les DataFrames pour chaque périmètre
-    result = {}
-    for perimeter, entries in dfs.items():
-        df = pd.DataFrame(entries)
-        result[perimeter] = df
+        if perimeter in perimeter_dataframes:
+            df = perimeter_dataframes[perimeter]
+            df = pd.concat([df, pd.DataFrame([entry])], ignore_index=True)
+            perimeter_dataframes[perimeter] = df
+        else:
+            df = pd.DataFrame([entry])
+            perimeter_dataframes[perimeter] = df
 
-    return result
+    return perimeter_dataframes
+
 
 def extract_password_v2(xlsx_file):
     wb = openpyxl.load_workbook(xlsx_file)
@@ -152,12 +168,33 @@ def extract_password_v2(xlsx_file):
                 }
                 entry['expiration date'] = entry['expiration date'].strftime('%Y-%m-%d')
                 entry = split_epa_perimeters(entry)
+                entry = sort_after_epa(entry)
                 data.append(entry)
 
-    for entries in data:
-        print(entries)
+    # for entries in data:
+    #     print(entries)
 
-    return data
+    perimeter_dataframes = create_perimeter_dataframes(data)
+    return perimeter_dataframes
 
 
-extract_password_v2("test tools.xlsx")
+xlsx_file = "test tools.xlsx"
+
+def save_dataframes_to_txt(dataframes, filename):
+    with open(filename, 'w') as file:
+        for perimeter, df in dataframes.items():
+            file.write(f"Perimeter: {perimeter}\n")
+            file.write(df.to_string(index=False))
+            file.write("\n\n")
+
+
+def create_html_dataframes(dataframes):
+    html_dataframes = {}
+    for perimeter, df in dataframes.items():
+        html_table = df.to_html(index=False)
+        html_dataframes[perimeter] = html_table
+    return html_dataframes
+
+dataframes = extract_password_v2(xlsx_file)
+save_dataframes_to_txt(dataframes, 'data.txt')
+

@@ -2,6 +2,7 @@ from flask import Flask,render_template, request
 from password_expiration import extract_password
 from testpassword import extract_password_v2
 import json
+from testpassword import create_html_dataframes
 
 app = Flask(__name__)
 
@@ -90,20 +91,22 @@ def password_expiration():
         content = extract_password(filename)
     return render_template("passwordexpiration.html", content = content)
 
-@app.route("/password_v2",methods=['GET', 'POST'])
-def password_expiration_v2():
+
+
+@app.route('/password_v3', methods=['GET', 'POST'])
+def show_dataframes():
     if request.method == 'POST':
         uploaded_file = request.files['file']
         filename = uploaded_file.filename
         uploaded_file.save(filename)
-        data = extract_password_v2(filename)
-        with open('data_accounts.json', 'r') as json_file:
-            json_datas = json.load(json_file)
+        dataframes = extract_password_v2(filename)
+        html_dataframes = create_html_dataframes(dataframes)
     else:
-        data = []
-        json_datas = []
+        xlsx_file = "test tools.xlsx"
+        dataframes = extract_password_v2(xlsx_file)
+        html_dataframes = create_html_dataframes(dataframes)
 
-    return render_template("passwordv2.html", json_datas = json_datas)
+    return render_template('dataframes.html', dataframes=html_dataframes)
 
 if __name__ == "__main__":
     app.run(host="192.168.1.26", port=5000, debug=True)
