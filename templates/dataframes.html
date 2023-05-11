@@ -21,20 +21,21 @@
                 </form>
           </div>
 
-        <div class="row mt-5">
-            {% for perimeter, dataframe in dataframes.items() %}
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-header">
-                        {{ perimeter }}
-                    </div>
-                    <div class="card-body">
-                        {{ dataframe|safe }}
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+<div class="row mt-5">
+    {% for perimeter, dataframe in dataframes.items() %}
+    <div class="col-md-12 mb-4">
+        <h1 class="card-header">
+            {{ perimeter.upper() }}
+        </h1>
+        <div class="card-body">
+            <table class="table table-hover table-bordered w-100">
+                {{ dataframe|safe }}
+            </table>
         </div>
+    </div>
+    {% endfor %}
+</div>
+
     </div>
   </body>
 </html>

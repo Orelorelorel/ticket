@@ -191,7 +191,9 @@ def save_dataframes_to_txt(dataframes, filename):
 def create_html_dataframes(dataframes):
     html_dataframes = {}
     for perimeter, df in dataframes.items():
-        html_table = df.to_html(index=False)
+        html_table = df.to_html(index=False, classes="table table-hover table-bordered")
+        # Ajouter la classe "text-center" aux balises <th>
+        html_table = html_table.replace("<th>", "<th class='text-center'>")
         html_dataframes[perimeter] = html_table
     return html_dataframes
 
