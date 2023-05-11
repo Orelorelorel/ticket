@@ -1,6 +1,7 @@
 import openpyxl
 import json
 from datetime import datetime
+import pandas as pd
 
 def extract_service_from_account(account):
     keywords = {
@@ -80,27 +81,56 @@ def get_email_for_service(service):
     return email_mapping.get(service, 'Adresse inconnue')
 
 def split_epa_perimeters(entry):
-    coretech_keywords = ["pcr", "lt", "gfx"]
-    audiotech_keywords = ["scr"]
-    viz_accounts_keyword = ["NHNWAPGFX","NHNWAPGFX","NHNZAPGFXHUB","NHNZAPVIZ","EPAWAPGFX","NHNZAPVIZ"]
+    keywords = {
+        "coretech": ["pcr", "lt", "gfx"],
+        "audiotech": ["scr"],
+        "viz_accounts": ["nhnwapgfx", "nhnwapgfx", "nhnzapgfxhub", "nhnzapviz", "epawapgfx", "nhnzapviz", "viz"],
+        "playout": [],
+        "postprod": ["ame", "stratus"]
+    }
 
-    if entry['service'] == "EPA" and any(keyword in entry['service account'] for keyword in coretech_keywords):
-        entry["perimeter"] = "coretech"
-        entry['email'] = "dl_core_technology_engineering@discovery.com"
-    elif entry['service'] == "EPA" and any(keyword in entry['service account'] for keyword in audiotech_keywords):
-        entry["perimeter"] = "audiotech"
-        entry['email'] = "jerome.bordier@wbd.com"
-    elif any(keyword in entry['service account'] for keyword in viz_accounts_keyword):
-        entry["perimeter"] = "coretech"
-        entry['email'] = "luc.duhamel@wbd.com"
+    if entry['service'] == "EPA":
+        for perimeter, keyword_list in keywords.items():
+            if any(keyword in entry['service account'] for keyword in keyword_list):
+                if perimeter == "coretech":
+                    entry["perimeter"] = perimeter
+                    entry['email'] = "dl_core_technology_engineering@discovery.com"
+                elif perimeter == "audiotech":
+                    entry["perimeter"] = perimeter
+                    entry['email'] = "jerome.bordier@wbd.com"
+                else:
+                    entry["perimeter"] = perimeter
+                    entry['email'] = ""
+                break
+        else:
+            entry["perimeter"] = "epa"
     else:
-        entry["perimeter"] = "none"
+        entry["perimeter"] = entry["service"].lower()
 
     return entry
+
 
 def json_dump_accounts(entries):
     with open('data_accounts.json', 'w') as file:
         json.dump(entries, file)
+
+def create_perimeter_dataframes(data):
+    dfs = {}  # Dictionnaire pour stocker les DataFrames par périmètre
+
+    # Regrouper les données par périmètre
+    for entry in data:
+        perimeter = entry['perimeter']
+        if perimeter not in dfs:
+            dfs[perimeter] = []
+        dfs[perimeter].append(entry)
+
+    # Créer les DataFrames pour chaque périmètre
+    result = {}
+    for perimeter, entries in dfs.items():
+        df = pd.DataFrame(entries)
+        result[perimeter] = df
+
+    return result
 
 def extract_password_v2(xlsx_file):
     wb = openpyxl.load_workbook(xlsx_file)
@@ -115,7 +145,7 @@ def extract_password_v2(xlsx_file):
             if expiration_date != "PWDExpires":
                 entry = {
                     'expiration date': expiration_date,
-                    'service account': account,
+                    'service account': account.lower(),
                     'service': service,
                     'email': get_email_for_service(service),
                     "perimeter": None
@@ -123,8 +153,11 @@ def extract_password_v2(xlsx_file):
                 entry['expiration date'] = entry['expiration date'].strftime('%Y-%m-%d')
                 entry = split_epa_perimeters(entry)
                 data.append(entry)
-    json_dump_accounts(data)
+
+    for entries in data:
+        print(entries)
 
     return data
 
 
+extract_password_v2("test tools.xlsx")
