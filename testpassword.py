@@ -109,7 +109,7 @@ def sort_after_epa(entry):
     keywords = {
         "viz_accounts": ["nhnwapgfx", "nhnwapgfx", "nhnzapgfxhub", "nhnzapviz", "epawapgfx", "nhnzapviz", "viz","nhngfx","gfx_eng"],
         "playout": [],
-        "postprod": ["ame", "stratus"],
+        "postprod": ["ame", "stratus","gvio"],
         "livetouch": []
     }
     emails = {

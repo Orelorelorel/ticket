@@ -111,8 +111,6 @@ def password_expiration():
 #     return render_template('dataframes.html', dataframes=html_dataframes)
 
 
-import os
-
 @app.route('/password_v4', methods=['GET', 'POST'])
 def show_dataframes2():
     html_dataframes = {}
