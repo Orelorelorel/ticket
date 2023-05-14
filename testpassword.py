@@ -174,17 +174,33 @@ def extract_password_v2(xlsx_file):
     # for entries in data:
     #     print(entries)
 
+
     perimeter_dataframes = create_perimeter_dataframes(data)
     return perimeter_dataframes
 
 
-xlsx_file = "test tools.xlsx"
-
 def save_dataframes_to_txt(dataframes, filename):
     with open(filename, 'w') as file:
         for perimeter, df in dataframes.items():
+            # Write the header
             file.write(f"Perimeter: {perimeter}\n")
-            file.write(df.to_string(index=False))
+            file.write("Email: ")  # Add email header
+
+            # Get the unique email for the current perimeter
+            emails = df['email'].unique()
+
+            # Write the unique email for the current perimeter
+            if len(emails) > 0:
+                file.write(emails[0])  # Write the first email
+            file.write("\n\n")
+
+            # Write the data rows
+            file.write("expiration date\t\tservice account\n")
+            for index, row in df.iterrows():
+                expiration_date = row['expiration date']
+                service_account = row['service account']
+                file.write(f"{expiration_date}\t\t{service_account}\n")
+
             file.write("\n\n")
 
 
@@ -196,7 +212,4 @@ def create_html_dataframes(dataframes):
         html_table = html_table.replace("<th>", "<th class='text-center'>")
         html_dataframes[perimeter] = html_table
     return html_dataframes
-
-dataframes = extract_password_v2(xlsx_file)
-save_dataframes_to_txt(dataframes, 'data.txt')
 
