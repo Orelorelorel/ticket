@@ -1,0 +1,568 @@
+Perimeter: service inconnu
+Email: Adresse inconnue
+
+expiration date		service account
+2023-05-09		svc_svr_zou_adm
+2023-05-10		svc_sqlcv_es_refresh
+2023-05-10		svc_strzqpsox02_agt
+2023-05-10		svc_strzqpsox02_sql
+2023-05-14		svc_vant_mia_admin
+2023-05-14		svc_vant_mia_sql
+2023-05-14		svc_vant_mia_sqlagt
+2023-05-17		svc opsdashboards
+2023-05-19		svc_ldc_mc_seu
+2023-05-19		svc_ldc_mc_ux
+2023-05-19		svc_ldc_mc_pm
+2023-05-19		svc_ldc_mc_xfer
+2023-05-19		svc_ldczqpdb02_agt
+2023-05-20		svc_mt_jira_connector
+2023-05-20		svc_lth_golf01
+2023-05-20		svc_eis_mix_01
+2023-05-23		svc_tvn_cnnippush
+2023-05-25		svc_tvn_jira
+2023-05-25		svc_tvn_geolocation
+2023-05-25		svc_prodsec
+2023-05-26		svc_news_sec
+2023-06-02		svc_ers_infoblox
+2023-06-02		svc_vdp_grafana
+2023-06-06		svc_awezqqsql05_agt
+2023-06-06		svc_tvn_divatest
+2023-06-08		svc_strapi_wod
+2023-06-08		svc_git_pluralsight
+
+
+Perimeter: oma
+Email: ismael.gonzalez@wbd.com + laura.martin@wbd.com
+
+expiration date		service account
+2023-05-12		svc_com_jira_automation
+2023-05-20		svc_oma_scr_01
+2023-05-20		svc_oma_pcr_01_03
+2023-05-20		svc_oma_mfr_01_audio
+2023-05-20		svc_oma_pcr_01_01
+2023-05-20		svc_oma_pcr_01_02
+2023-05-20		svc_oma_mfr_02_audio
+2023-05-20		svc_oma_mix_01
+2023-05-20		svc_oma_mcr_01
+2023-05-20		svc_oma_mfr_01_01
+2023-05-20		svc_oma_dmr_01
+2023-05-25		svc_oma_mfr_02_lt1
+2023-05-25		svc_oma_mfr_01_lt1
+2023-05-25		svc_oma_pcr_01_lt2
+2023-05-25		svc_oma_pcr_01_lt1
+
+
+Perimeter: bncs
+Email: louis.marrel@wbd.com
+
+expiration date		service account
+2023-05-16		svc_bncs_ldc3062
+2023-05-16		svc_bncs_ldc3101
+2023-05-16		svc_bncs_ldc3305
+2023-05-16		svc_bncs_ldc3051
+2023-05-16		svc_bncs_ldc3311
+2023-05-16		svc_bncs_ldc3061
+2023-05-16		svc_bncs_ldc3052
+2023-05-16		svc_bncs_ldc3306
+2023-05-16		svc_bncs_ldc3322
+2023-05-16		svc_bncs_ldc3321
+2023-05-16		svc_bncs_ldc3312
+2023-05-16		svc_bncs_ldc3351
+2023-05-16		svc_bncs_ldc3362
+2023-05-16		svc_bncs_ldc3361
+2023-05-16		svc_bncs_ldc3352
+2023-05-16		svc_bncs_ldc3002
+2023-05-16		svc_bncs_ldc3001
+2023-05-16		svc_bncs_ldc3012
+2023-05-16		svc_bncs_ldc3011
+2023-05-16		svc_bncs_ldc3160
+2023-05-16		svc_bncs_ldc3232
+2023-05-16		svc_bncs_ldc3159
+2023-05-16		svc_bncs_ldc3161
+2023-05-16		svc_bncs_ldc3024
+2023-05-16		svc_bncs_ldc3023
+2023-05-16		svc_bncs_ldc3042
+2023-05-16		svc_bncs_ldc3041
+2023-05-16		svc_bncs_ldc3014
+2023-05-16		svc_bncs_ldc3013
+2023-05-16		svc_bncs_ldc3022
+2023-05-16		svc_bncs_ldc3021
+2023-05-16		svc_bncs_ldc3183
+2023-05-16		svc_bncs_ldc3136
+2023-05-16		svc_bncs_ldc3182
+2023-05-16		svc_bncs_ldc3181
+2023-05-16		svc_bncs_ldc3151
+2023-05-16		svc_bncs_ldc3187
+2023-05-16		svc_bncs_ldc3188
+2023-05-16		svc_bncs_ldc3186
+2023-05-16		svc_bncs_ldc3184
+2023-05-16		svc_bncs_ldc3185
+2023-05-16		svc_bncs_ldc3166
+2023-05-16		svc_bncs_ldc3154
+2023-05-16		svc_bncs_ldc3162
+2023-05-16		svc_bncs_ldc3155
+2023-05-16		svc_bncs_ldc3156
+2023-05-16		svc_bncs_ldc3157
+2023-05-16		svc_bncs_ldc3153
+2023-05-16		svc_bncs_ldc3152
+2023-05-16		svc_bncs_ldc3165
+2023-05-16		svc_bncs_ldc3163
+2023-05-16		svc_bncs_ldc3164
+2023-05-16		svc_bncs_ldc3243
+2023-05-16		svc_bncs_ldc3244
+2023-05-16		svc_bncs_ldc3242
+2023-05-16		svc_bncs_ldc3158
+2023-05-16		svc_bncs_ldc3241
+2023-05-16		svc_bncs_ldc3301
+2023-05-16		svc_bncs_ldc3302
+2023-05-16		svc_bncs_ldc3272
+2023-05-16		svc_bncs_ldc3271
+2023-05-16		svc_bncs_ldc3102
+2023-05-16		svc_bncs_ldc3231
+2023-05-16		svc_bncs_ldc3135
+2023-05-16		svc_bncs_ldc3204
+2023-05-16		svc_bncs_ldc3203
+2023-05-16		svc_bncs_ldc3191
+2023-05-16		svc_bncs_ldc3192
+2023-05-16		svc_bncs_ldc3223
+2023-05-16		svc_bncs_ldc3131
+2023-05-16		svc_bncs_ldc3222
+2023-05-16		svc_bncs_ldc3221
+2023-05-16		svc_bncs_ldc3132
+
+
+Perimeter: ldc
+Email: service3@example.com
+
+expiration date		service account
+2023-05-16		svc_ldc_mfr_07_lt1
+2023-05-16		svc_ldc_mfr_02_lt1
+2023-05-16		svc_ldc_mfr_01_lt1
+2023-05-16		svc_ldc_pcr_04_lt1
+2023-05-16		svc_ldc_pcr_03_lt1
+2023-05-16		svc_ldc_mfr_08_lt1
+2023-05-20		svc_ldc_ptest_02
+2023-05-20		svc_ldc_ptest_01
+2023-05-20		svc_ldc_scr_03
+2023-05-20		svc_ldc_scr_04
+2023-05-20		svc_ldc_tmr_01
+2023-05-20		svc_ldc_scr_01
+2023-05-20		svc_ldc_scr_02
+2023-05-20		svc_ldc_pcr_02_lt1
+2023-05-20		svc_ldc_pcr_02_02
+2023-05-20		svc_ldc_pcr_02_01
+2023-05-20		svc_ldc_pcr_03_02
+2023-05-20		svc_ldc_pcr_04_01
+2023-05-20		svc_ldc_pcr_04_02
+2023-05-20		svc_ldc_pcr_03_01
+2023-05-20		svc_ldc_tmr_02
+2023-05-20		svc_ldc_ing_03
+2023-05-20		svc_ldc_ing_04
+2023-05-20		svc_ldc_ing_01
+2023-05-20		svc_ldc_ing_02
+2023-05-20		svc_ldc_lin_03
+2023-05-20		svc_ldc_lin_04
+2023-05-20		svc_ldc_lin_01
+2023-05-20		svc_ldc_lin_02
+2023-05-20		svc_ldc_eng_01
+2023-05-20		svc_ldc_eng_02
+2023-05-20		svc_ldc_ictest_01
+2023-05-20		svc_ldc_ictest_02
+2023-05-20		svc_ldc_eng_03
+2023-05-20		svc_ldc_eng_04
+2023-05-20		svc_ldc_com_01
+2023-05-20		svc_ldc_mfr_13_01
+2023-05-20		svc_ldc_mfr_14_01
+2023-05-20		svc_ldc_mfr_12_01
+2023-05-20		svc_ldc_mfr_12_02
+2023-05-20		svc_ldc_mfr_15_01
+2023-05-20		svc_ldc_ob_01
+2023-05-20		svc_ldc_ob_02
+2023-05-20		svc_ldc_mfr_16_01
+2023-05-20		svc_ldc_mfr_17_01
+2023-05-20		svc_ldc_pcr_01_lt1
+2023-05-20		svc_ldc_pcr_01_02
+2023-05-20		svc_ldc_pcr_01_01
+2023-05-20		svc_ldc_mfr_04_02
+2023-05-20		svc_ldc_mfr_05_01
+2023-05-20		svc_ldc_mfr_03_02
+2023-05-20		svc_ldc_mfr_04_01
+2023-05-20		svc_ldc_mfr_05_02
+2023-05-20		svc_ldc_mfr_07_01
+2023-05-20		svc_ldc_mfr_07_02
+2023-05-20		svc_ldc_mfr_06_01
+2023-05-20		svc_ldc_mfr_06_02
+2023-05-20		svc_ldc_mfr_03_01
+2023-05-20		svc_ldc_mcr_01
+2023-05-20		svc_ldc_mcr_03
+2023-05-20		svc_ldc_lin_06
+2023-05-20		svc_ldc_lin_sup_01
+2023-05-20		svc_ldc_mfr_01_01
+2023-05-20		svc_ldc_mfr_02_01
+2023-05-20		svc_ldc_mfr_02_02
+2023-05-20		svc_ldc_lin_05
+2023-05-20		svc_ldc_mfr_01_02
+2023-05-20		svc_ldc_mfr_08_02
+2023-05-20		svc_ldc_mfr_10_02
+2023-05-20		svc_ldc_mfr_09_02
+2023-05-20		svc_ldc_mfr_09_01
+2023-05-20		svc_ldc_mfr_08_01
+2023-05-20		svc_ldc_mfr_10_01
+2023-05-20		svc_ldc_mfr_11_01
+2023-05-20		svc_ldc_mfr_11_02
+2023-05-25		svc_ ecut_ldc_pan006
+2023-05-25		svc_ecut_ldc_pan009
+2023-05-25		svc_ecut_ldc_pan008
+2023-05-25		svc_ecut_ldc_pan007
+2023-05-25		svc_ecut_ldc_pan005
+2023-05-25		svc_ecut_ldc_pan010
+
+
+Perimeter: sto
+Email: tomas.vileaholm@wbd.com + jacob.mueller@wbd.com
+
+expiration date		service account
+2023-05-20		svc_sto_lt07
+2023-05-20		svc_sto_mfr_02_01
+2023-05-20		svc_sto_mfr_01_01
+2023-05-20		svc_sto_lt04
+2023-05-20		svc_sto_lt03
+2023-05-20		svc_sto_lt02
+2023-05-20		svc_sto_lt05
+2023-05-20		svc_sto_lt06
+2023-05-20		svc_sto_tmc_03
+2023-05-20		svc_sto_tmr_01
+2023-05-20		svc_sto_mfr_07_02
+2023-05-20		svc_sto_mfr_08_01
+2023-05-20		svc_sto_mfr_07_01
+2023-05-20		svc_sto_mfr_08_02
+2023-05-20		svc_sto_pcr_01_02
+2023-05-20		svc_sto_pcr_01_03
+2023-05-20		svc_sto_mfr_08_lt1
+2023-05-20		svc_sto_pcr_01_01
+2023-05-20		svc_sto_mfr_06_02
+2023-05-20		svc_sto_mfr_04_02
+2023-05-20		svc_sto_mfr_03_01
+2023-05-20		svc_sto_mfr_04_01
+2023-05-20		svc_sto_mfr_04_lt1
+2023-05-20		svc_sto_mfr_05_lt1
+2023-05-20		svc_sto_mfr_06_01
+2023-05-20		svc_sto_mfr_05_01
+2023-05-20		svc_sto_mfr_05_02
+2023-05-20		svc_sto_pcr_04_02
+2023-05-20		svc_sto_scr_01
+2023-05-20		svc_sto_pcr_03_02
+2023-05-20		svc_sto_pcr_04_01
+2023-05-20		svc_sto_scr_02
+2023-05-20		svc_sto_tmc_01
+2023-05-20		svc_sto_tmc_02
+2023-05-20		svc_sto_scr_03
+2023-05-20		svc_sto_scr_04
+2023-05-20		svc_sto_pcr_03_01
+2023-05-20		svc_sto_pcr_01_lt1
+2023-05-20		svc_sto_pcr_01_lt2
+2023-05-20		svc_sto_pcr_01_04
+2023-05-20		svc_sto_pcr_01_05
+2023-05-20		svc_sto_pcr_02_01
+2023-05-20		svc_sto_pcr_02_lt1
+2023-05-20		svc_sto_pcr_02_lt2
+2023-05-20		svc_sto_pcr_02_02
+
+
+Perimeter: sso
+Email: service9@example.com
+
+expiration date		service account
+2023-05-20		svc_sso_pcr_01_03
+2023-05-20		svc_sso_pcr_01_lt1
+2023-05-20		svc_sso_pcr_02_02
+2023-05-20		svc_sso_pcr_02_01
+2023-05-20		svc_sso_pcr_01_lt2
+2023-05-20		svc_sso_mix_01
+2023-05-20		svc_sso_pcr_01_02
+2023-05-20		svc_sso_pcr_01_01
+2023-05-20		svc_sso_scr_01
+2023-05-20		svc_sso_scr_02
+2023-05-20		svc_sso_pcr_02_lt1
+2023-05-20		svc_sso_pcr_02_03
+2023-05-20		svc_sso_pcr_02_lt2
+2023-05-20		svc_sso_mfr_01_lt1
+2023-05-20		svc_sso_mfr_01_01
+2023-05-20		svc_sso_mfr_01_02
+2023-05-20		svc_sso_mfr_02_01
+2023-05-20		svc_sso_mfr_02_02
+2023-05-20		svc_sso_mfr_02_lt1
+2023-05-20		svc_sso_lt06
+2023-05-20		svc_sso_lt01
+2023-05-20		svc_sso_lt04
+2023-05-20		svc_sso_lt05
+2023-05-20		svc_sso_lt02
+2023-05-20		svc_sso_lt03
+
+
+Perimeter: sot
+Email: service11@example.com
+
+expiration date		service account
+2023-05-20		svc_sot_pcr_03_02
+2023-05-20		svc_sot_pcr_03_03
+2023-05-20		svc_sot_pcr_02_lt1
+2023-05-20		svc_sot_pcr_03_01
+2023-05-20		svc_sot_scr_02
+2023-05-20		svc_sot_scr_03
+2023-05-20		svc_sot_pcr_03_lt1
+2023-05-20		svc_sot_scr_01
+2023-05-20		svc_sot_pcr_01_08
+2023-05-20		svc_sot_pcr_01_06
+2023-05-20		svc_sot_pcr_01_07
+2023-05-20		svc_sot_pcr_01_lt1
+2023-05-20		svc_sot_pcr_02_02
+2023-05-20		svc_sot_pcr_02_03
+2023-05-20		svc_sot_pcr_01_lt2
+2023-05-20		svc_sot_pcr_02_01
+2023-05-20		svc_sot_tmr_01
+2023-05-20		svc_sot_tmc_01
+2023-05-20		svc_sot_tmc_02
+2023-05-20		svc_sot_pcr_01_05
+2023-05-20		svc_sot_lt01
+2023-05-20		svc_sot_lt02
+2023-05-20		svc_sot_com_01
+2023-05-20		svc_sot_dmr_01
+2023-05-20		svc_sot_lt03
+2023-05-20		svc_sot_lt06
+2023-05-20		svc_sot_lt07
+2023-05-20		svc_sot_lt04
+2023-05-20		svc_sot_lt05
+2023-05-20		svc_sot_mfr_01_01
+2023-05-20		svc_sot_mfr_07_lt1
+2023-05-20		svc_sot_mfr_06_02
+2023-05-20		svc_sot_mfr_08_lt1
+2023-05-20		svc_sot_pcr_01_03
+2023-05-20		svc_sot_pcr_01_04
+2023-05-20		svc_sot_pcr_01_01
+2023-05-20		svc_sot_pcr_01_02
+2023-05-20		svc_sot_mfr_01_lt1
+2023-05-20		svc_sot_mfr_02_01
+2023-05-20		svc_sot_mfr_01_02
+2023-05-20		svc_sot_mfr_04_01
+2023-05-20		svc_sot_mfr_05_02
+2023-05-20		svc_sot_mfr_06_01
+2023-05-20		svc_sot_mfr_04_02
+2023-05-20		svc_sot_mfr_05_01
+
+
+Perimeter: mmu
+Email: jochen_eberlein@discovery.com + helmar_schmidt@discovery.com
+
+expiration date		service account
+2023-05-20		svc_mmu_scr_02
+2023-05-20		svc_mmu_tmc_01
+2023-05-20		svc_mmu_pcr_02_02
+2023-05-20		svc_mmu_scr_01
+2023-05-20		svc_mmu_tmc_02
+2023-05-20		svc_mmu_tmr_01
+2023-05-20		svc_mmu_pcr_02_01
+2023-05-20		svc_mmu_mfr_01_02
+2023-05-20		svc_mmu_mfr_02_01
+2023-05-20		svc_mmu_mfr_02_02
+2023-05-20		svc_mmu_pcr_01_01
+2023-05-20		svc_mmu_pcr_01_02
+2023-05-20		svc_mmu_mix_01
+2023-05-20		svc_mmu_mix_02
+2023-05-20		svc_mmu_mfr_01_01
+2023-05-25		svc_mmu_lt03
+2023-05-25		svc_mmu_lt02
+2023-05-25		svc_mmu_pcr_01_lt2
+2023-05-25		svc_mmu_pcr_01_lt1
+2023-05-25		svc_mmu_pcr_02_lt1
+2023-05-25		svc_mmu_lt01
+
+
+Perimeter: nhn
+Email: service4@example.com
+
+expiration date		service account
+2023-05-20		svc_nhn_dmr_01
+2023-05-20		svc_nhn_ictest_01
+2023-05-20		svc_nhn_tmr_01
+2023-05-20		svc_nhn_tmr_02
+2023-05-20		svc_nhn_scr_01
+2023-05-20		svc_nhn_ob_01
+2023-05-20		svc_nhn_ob_02
+2023-05-20		svc_nhn_ictest_02
+2023-05-20		svc_nhn_mix_01
+2023-05-20		svc_nhn_pcr_01_01
+2023-05-20		svc_nhn_ptest_01
+2023-05-20		svc_nhn_ptest_02
+2023-05-20		svc_nhn_pcr_01_02
+2023-05-20		svc_nhn_pcr_01_03
+2023-05-25		svc_ ecut_nhn_pan009
+2023-05-25		svc_ ecut_nhn_pan008
+2023-05-25		svc_ ecut_nhn_pan010
+2023-05-25		svc_nhn_lt01
+2023-05-25		svc_nhn_momentu_nd09
+2023-05-25		svc_nhn_lt02
+2023-05-25		svc_nhn_pcr_01_lt2
+2023-05-25		svc_nhn_momentu_nd10
+2023-05-25		svc_nhn_pcr_01_lt1
+
+
+Perimeter: w16
+Email: service15@example.com
+
+expiration date		service account
+2023-05-20		svc_w16_mfr_01_audio
+2023-05-25		svc_w16_lt01
+2023-05-25		svc_w16_lt02
+2023-05-25		svc_w16_mix_02
+2023-05-25		svc_w16_mix_01
+
+
+Perimeter: zmi
+Email: yurij.gazzola@wbd.com + marco.domante_guest@it.emglive.com + michele_chiarulli@discovery.com
+
+expiration date		service account
+2023-05-20		svc_zmi_mcr_01
+2023-05-20		svc_zmi_pcr_01_03
+2023-05-20		svc_zmi_scr_02
+2023-05-20		svc_zmi_pcr_02_01
+2023-05-20		svc_zmi_pcr_02_02
+2023-05-25		svc_zmi_pcr_01_lt2
+2023-05-25		svc_zmi_mfr_01_lt1
+2023-05-25		svc_zmi_pcr_01_lt1
+
+
+Perimeter: fbu
+Email: gszabo@eusp.hu
+
+expiration date		service account
+2023-05-20		svc_fbu_mix_01
+
+
+Perimeter: eli
+Email: service18@example.com
+
+expiration date		service account
+2023-05-20		svc_eli_mix_01
+
+
+Perimeter: emo
+Email: maxim.yanchevsky@wbdcontractor.com
+
+expiration date		service account
+2023-05-20		svc_emo_mix_02
+2023-05-20		svc_emo_mix_01
+2023-05-26		svc_remote_phones
+
+
+Perimeter: ebe
+Email: marija@alterrights.com
+
+expiration date		service account
+2023-05-20		svc_ebe_mix_01
+
+
+Perimeter: ebc
+Email: service21@example.com
+
+expiration date		service account
+2023-05-20		svc_ebc_mix_02
+2023-05-20		svc_ebc_mix_01
+
+
+Perimeter: ebu
+Email: ionut@digitalbroadcast.ro
+
+expiration date		service account
+2023-05-20		svc_ebu_mix_02
+2023-05-20		svc_ebu_mix_01
+
+
+Perimeter: epa
+Email: mav@eurosport.com
+
+expiration date		service account
+2023-05-20		svc_epa_dig_02
+2023-05-20		svc_epa_dig_sup_01
+2023-05-20		svc_epa_aer_02
+2023-05-20		svc_epa_aer_01
+2023-05-20		svc_epa_dig_01
+2023-05-20		svc_epa_aer_03
+2023-05-20		svc_epa_mcr_01
+2023-05-20		svc_epa_lin_sup_01
+2023-05-20		svc_epa_mcr_03
+2023-05-20		svc_epa_mcr_02
+2023-05-20		svc_epa_ing_04
+2023-05-20		svc_epa_ing_03
+2023-05-20		svc_epa_lin_02
+2023-05-20		svc_epa_lin_01
+2023-05-20		svc_epa_mcr_04
+2023-05-20		svc_epa_eng_02
+2023-05-20		svc_epa_eng_01
+2023-05-20		svc_epa_eng_03
+2023-05-20		svc_epa_eng_sup_01
+2023-05-20		svc_epa_eng_04
+2023-05-20		svc_epa_ing_02
+2023-05-20		svc_epa_ing_01
+2023-05-28		svc_wodl_epa_01
+2023-05-28		svc_wodl_epa_02
+2023-06-08		svc_epa_xpr01
+
+
+Perimeter: eat
+Email: mbolierakis@eurosport-tv.gr
+
+expiration date		service account
+2023-05-20		svc_eat_mix_01
+
+
+Perimeter: epr
+Email: service29@example.com
+
+expiration date		service account
+2023-05-20		svc_epr_mix_02
+2023-05-20		svc_epr_mix_01
+
+
+Perimeter: eso
+Email: lyubomir.chochov@dolimediastudio.com
+
+expiration date		service account
+2023-05-20		svc_eso_mix_02
+2023-05-20		svc_eso_mix_01
+
+
+Perimeter: coretech
+Email: dl_core_technology_engineering@discovery.com
+
+expiration date		service account
+2023-05-20		svc_epa_pcr_32_01
+2023-05-20		svc_epa_pcr_32_03
+2023-05-20		svc_epa_pcr_32_02
+2023-05-25		svc_epa_pcr_31_lt1
+2023-05-25		svc_epa_pcr_42_lt2
+2023-05-25		svc_epa_pcr_42_lt1
+
+
+Perimeter: viz_accounts
+Email: luc.duhamel@wbd.com
+
+expiration date		service account
+2023-05-25		svc_nhngfx_eng012
+2023-05-25		svc_nhngfx_eng013
+2023-05-25		svc_nhngfx_eng014
+2023-05-25		svc_nhngfx_eng015
+2023-05-25		svc_nhngfx_eng007
+2023-05-25		svc_nhngfx_eng006
+2023-05-25		svc_nhngfx_eng005
+2023-05-25		svc_nhngfx_eng011
+2023-05-25		svc_nhnviztrio002
+2023-05-25		svc_nhnviztrio003
+2023-05-25		svc_nhngfx_eng016
+2023-05-25		svc_nhnviztrio001
+2023-05-25		svc_nhngfx_eng001
+2023-05-25		svc_nhngfx_eng002
+2023-05-25		svc_nhngfx_eng004
+2023-05-25		svc_nhngfx_eng003
+
+
