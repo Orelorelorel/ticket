@@ -1,0 +1,23 @@
+{% block content %}
+<style>
+  .box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+</style>
+
+{% for result in results %}
+<div class="box">
+  <p>Source Package: {{ result.source_package }}</p>
+  <p>Destination: {{ result.destination }}</p>
+  <p>Langages:</p>
+  <ul>
+    {% for language in result.languages %}
+    <li>Index: {{ language.index }}, Type: {{ language.type }}, Tag: {{ language.tag }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}
+{% endblock %}

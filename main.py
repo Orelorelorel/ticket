@@ -1,10 +1,9 @@
-from flask import Flask,render_template, request, send_file, redirect, url_for, make_response
-from password_expiration import extract_password
+from flask import Flask,render_template, request, send_file, redirect, url_for, make_response, jsonify
 from testpassword import extract_password_v2
-import json
 from testpassword import create_html_dataframes
 from testpassword import save_dataframes_to_txt
 import os
+import requests
 
 app = Flask(__name__)
 
@@ -83,33 +82,6 @@ def mam_ticket():
     service = "Mam / Post prod"
     return render_template("mampostprod.html",content=filter_content, service = service)
 
-@app.route("/password_expiration", methods=['GET', 'POST'])
-def password_expiration():
-    content = None
-    if request.method == 'POST':
-        uploaded_file = request.files['file']
-        filename = uploaded_file.filename
-        uploaded_file.save(filename)
-        content = extract_password(filename)
-    return render_template("passwordexpiration.html", content = content)
-
-
-
-# @app.route('/password_v3', methods=['GET', 'POST'])
-# def show_dataframes():
-#     if request.method == 'POST':
-#         uploaded_file = request.files['file']
-#         filename = uploaded_file.filename
-#         uploaded_file.save(filename)
-#         dataframes = extract_password_v2(filename)
-#         html_dataframes = create_html_dataframes(dataframes)
-#     else:
-#         xlsx_file = "test tools.xlsx"
-#         dataframes = extract_password_v2(xlsx_file)
-#         html_dataframes = create_html_dataframes(dataframes)
-#
-#     return render_template('dataframes.html', dataframes=html_dataframes)
-
 
 @app.route('/password_v4', methods=['GET', 'POST'])
 def show_dataframes2():
@@ -154,6 +126,44 @@ def download_txt():
         # Si le fichier data.txt n'existe pas, redirige vers la page d'origine
         return redirect(url_for('show_dataframes2'))
 
+
+@app.route('/packagepath')
+def packagepath():
+    return render_template('packagepath.html')
+
+@app.route('/search', methods=['POST'])
+def search():
+    destination = request.form['destination']
+    headers = {}
+    results = []
+
+    while destination:
+        url = "http://nhnbncsapi.discovery.com:8080/packager/v1/tally/destination/" + str(destination)
+        response = requests.get(url, headers=headers)
+        response_json = response.json()
+
+        # Récupérer les informations nécessaires
+        languages = []
+        for language in response_json.get('Languages', []):
+            languages.append({
+                'index': language.get('index', ''),
+                'type': language.get('type', ''),
+                'tag': language.get('tag', '')
+            })
+
+        result = {
+            'destination': destination,
+            'source_package': response_json.get('Source_Package'),
+            'languages': languages
+        }
+        results.append(result)
+
+        destination = response_json.get('Source_Package')
+
+    # Inverser l'ordre des résultats
+    results.reverse()
+
+    return render_template('search.html', results=results)
 
 if __name__ == "__main__":
     app.run(host="192.168.1.26", port=5000, debug=True)
